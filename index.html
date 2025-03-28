@@ -33,6 +33,33 @@
             </span>
         </div>
     </nav>
+    <body class="flex flex-col items-start bg-gray-100 dark:bg-gray-900">
+    <nav class="flex flex-col lg:flex-row justify-between w-full h-auto bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 p-4">
+        <div class="flex justify-between items-center w-full lg:w-auto">
+            <span class="px-6 py-2 font-semibold text-xl text-white transition-transform transform hover:-translate-y-1 whitespace-nowrap">
+                Harvest sure&#8482;
+            </span>
+            <button id="hamburger" class="lg:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M3 5h14a1 1 0 110 2H3a1 1 0 010-2zM3 9h14a1 1 0 110 2H3a1 1 0 010-2zM3 13h14a1 1 0 110 2H3a1 1 0 010-2z" clip-rule="evenodd" />
+                </svg>
+            </button>
+        </div>
+        <ul id="mobileMenu" class="hidden lg:flex lg:flex-row lg:space-x-4 lg:items-center w-full bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 lg:bg-transparent lg:shadow-none shadow-lg">
+            <a href=""><li class="text-white px-3 py-2 rounded hover:bg-orange-500">Home</li></a>
+            <a href=""><li class="text-white px-3 py-2 rounded hover:bg-orange-500">About Us</li></a>
+        </ul>
+    </nav>
+    <script>
+        // Hamburger Menu Toggle Logic
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden'); // Show or hide the menu
+            mobileMenu.classList.toggle('block');  // Ensure it takes up space when visible
+        });
+    </script>
 
     <!-- Oil Benefits Section -->
     <section class="container mx-auto p-6 text-center">
